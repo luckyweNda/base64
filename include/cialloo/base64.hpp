@@ -7,26 +7,28 @@
 namespace cialloo {
 namespace base64 {
 
+std::string encode(const std::string value);
+std::string decode(const std::string value);
+
 class encoder
 {
 private:
-
-
 public:
     encoder(){};
     ~encoder(){};
 
-    std::string encode(std::string value);
+    std::string encode(const std::string value){return cialloo::base64::encode(value);};
 };
 
 class decoder
 {
+private:
+public:
+    decoder(){};
+    ~decoder(){};
 
+    std::string decode(const std::string value){return cialloo::base64::decode(value);};
 };
-
-
-std::string encode(std::string value);
-std::string decode(std::string value);
 
 } // namespace base64
 } // namespace cialloo
